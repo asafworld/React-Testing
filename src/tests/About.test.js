@@ -45,6 +45,8 @@ describe('Testa o componente About', () => {
     const { container } = renderWithRouter(<About />);
     const paragraphs = container.querySelectorAll('p');
     expect(paragraphs.length).toBe(2);
+    expect(paragraphs[0]).not.toBeUndefined();
+    expect(paragraphs[1]).not.toBeUndefined();
   });
 
   test('Testa se a página contém a seguinte imagem de uma Pokédex', () => {
