@@ -14,7 +14,7 @@ const renderWithRouter = (component) => {
 };
 
 describe('Testa o componente Pokedex', () => {
-  
+  const next = 'Próximo pokémon';
   test('Testa se a página contém um h2 com o texto Encountered pokémons.', () => {
     renderWithRouter(<App />);
     const heading = screen.getByRole('heading', { name: 'Encountered pokémons' });
@@ -23,7 +23,7 @@ describe('Testa o componente Pokedex', () => {
 
   test('Testa se exibe o próximo pokémon se clicla no botão Próximo pokémon', () => {
     renderWithRouter(<App />);
-    const nextButton = screen.getByRole('button', { name: 'Próximo pokémon' });
+    const nextButton = screen.getByRole('button', { name: next });
     expect(nextButton).toBeInTheDocument();
 
     const poke1 = screen.getByText('Pikachu');
@@ -102,7 +102,7 @@ describe('Testa o componente Pokedex', () => {
 
     const electricButton = screen.getByRole('button', { name: 'Electric' });
     userEvent.click(electricButton);
-    const nextButton = screen.getByRole('button', { name: 'Próximo pokémon' });
+    const nextButton = screen.getByRole('button', { name: next });
     expect(nextButton).toBeDisabled();
 
     const fireButton = screen.getByRole('button', { name: 'Fire' });
