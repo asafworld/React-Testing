@@ -60,35 +60,27 @@ describe('Testa o componente Pokedex', () => {
   test('Testa se a Pokédex tem os botões de filtro.', () => {
     const buttonsObj = [
       {
-        const: 'all',
         name: 'All',
       },
       {
-        const: 'electric',
         name: 'Electric',
       },
       {
-        const: 'fire',
         name: 'Fire',
       },
       {
-        const: 'bug',
         name: 'Bug',
       },
       {
-        const: 'poison',
         name: 'Poison',
       },
       {
-        const: 'psychic',
         name: 'Psychic',
       },
       {
-        const: 'normal',
         name: 'Normal',
       },
       {
-        const: 'dragon',
         name: 'Dragon',
       },
     ];
